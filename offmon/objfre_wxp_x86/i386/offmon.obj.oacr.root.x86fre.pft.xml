@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+<OACRDEFECTCOUNT>1</OACRDEFECTCOUNT>
+<OACRERRORCOUNT>0</OACRERRORCOUNT>
+<DEFECT _seq="1"><SFA><LINE>88</LINE><COLUMN>15</COLUMN><FILENAME>offmon.c</FILENAME><FILEPATH>c:\work\openffire\offmon\</FILEPATH></SFA><DEFECTCODE>28719</DEFECTCODE><DESCRIPTION>Banned API Usage:  sprintf is a Banned API as listed in dontuse.h for security purposes.</DESCRIPTION><FUNCTION>_FindAndOpenDevice</FUNCTION><FUNCLINE>80</FUNCLINE><PATH/></DEFECT>
+</DEFECTS>

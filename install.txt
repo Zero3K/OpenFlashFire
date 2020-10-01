@@ -1,0 +1,11 @@
+
+    OpenFlashFire: Buffer Incorporated Write Reordering Layer
+    Copyright (C) 2009-2010, Hyojun Kim
+
+  ** How to Install **
+
+   1) Right click install.inf file, then select 'install'
+      By default, OpenFlashFire will be applied to the first fixed disk drive.
+      (Default setting can be changed by modifying install.inf file before installation)
+   2) Reboot System
+   3) Use offmon.exe to monitor and control OpenFlashFire driver. 

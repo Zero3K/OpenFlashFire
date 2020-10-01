@@ -1,0 +1,50 @@
+[Version]
+Signature = "$Windows NT$"
+Class     = DiskDrive
+ClassGUID = {4d36e967-e325-11ce-bfc1-08002be10318}
+Provider  = zartoven
+DriverVer = 2010June
+
+[DefaultInstall.NT]
+CopyFiles = @offire.sys
+Addreg    = offire.AddReg
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[offire.AddReg]
+HKLM, System\CurrentControlSet\Control\Class\{4d36e967-e325-11ce-bfc1-08002be10318}, UpperFilters, 0x00010008, offire
+HKLM, System\CurrentControlSet\Services\offire\Parameters, DiskNum,     0x00010001, 0x00000000
+HKLM, System\CurrentControlSet\Services\offire\Parameters, BufferSize,  0x00010001, 0x00000020
+HKLM, System\CurrentControlSet\Services\offire\Parameters, ClusterSize, 0x00010001, 0x00001000
+HKLM, System\CurrentControlSet\Services\offire\Parameters, Option,      0x00010001, 0x00000000
+
+[DefaultInstall.NT.Services]
+AddService = offire, , offire.Service.Install
+
+[offire.Service.Install]
+DisplayName    = %service_desc%
+ServiceType    = 1
+StartType      = 0
+ErrorControl   = 1
+ServiceBinary  = %12%\offire.sys
+LoadOrderGroup = "PnP Filter"
+
+[SourceDisksFiles]
+offire.sys=1
+
+[SourceDisksNames]
+1 = %diskid1%,,,
+
+[SourceDisksNames.x86]
+1 = %diskid1%,,,
+
+[SourceDisksNames.ia64]
+1 = %diskid1%,,,\ia64
+
+[SourceDisksNames.amd64]
+1 = %diskid1%,,,\amd64
+
+[Strings]
+service_desc = "OpenFlashFire"
+diskid1      = "OpenFlashFire Installation Disk #1"
